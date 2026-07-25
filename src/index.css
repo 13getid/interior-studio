@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal: #1F2937;
+  --color-warmwhite: #FAFAFA;
+  --color-gold: #C8A951;
+  --color-stone: #A8A29E;
+  --color-beige: #EDE6DB;
+
+  --font-display: "Fraunces", serif;
+  --font-body: "Jost", sans-serif;
+}
