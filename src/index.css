@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-charcoal: #1F2937;
   --color-warmwhite: #FAFAFA;

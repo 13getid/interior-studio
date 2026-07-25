@@ -1,11 +1,14 @@
+import Navbar from "@/components/navigation/Navbar";
+
 function App() {
   return (
-    <div className="bg-warmwhite min-h-screen flex items-center justify-center">
-      <h1 className="font-display text-5xl text-charcoal">
-        Designing Spaces, <span className="text-gold italic">Defining Lives.</span>
-      </h1>
+    <div className="bg-warmwhite dark:bg-charcoal min-h-screen">
+      <Navbar />
+      <div className="h-[80vh] bg-stone flex items-center justify-center">
+        <p className="text-white font-body">Hero image will go here</p>
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
