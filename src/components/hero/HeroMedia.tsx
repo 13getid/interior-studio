@@ -29,7 +29,7 @@ export default function HeroMedia() {
 
   return (
     <img
-      className="absolute inset-0 w-full h-full object-cover object-top"
+      className="absolute inset-0 w-full h-full object-cover object-center"
       src={getCloudinaryImageUrl(IMAGE_PUBLIC_ID)}
       alt="Luxury interior design showcase"
     />
