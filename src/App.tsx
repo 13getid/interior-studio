@@ -2,6 +2,7 @@ import Navbar from "@/components/navigation/Navbar";
 import HeroMedia from "@/components/hero/HeroMedia";
 import HeroContent from "@/components/hero/HeroContent";
 import HeroStats from "@/components/hero/HeroStats";
+import AboutPreview from "@/components/common/AboutPreview";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         </div>
         <HeroStats />
       </section>
+      <AboutPreview/>
     </div>
   );
 }
