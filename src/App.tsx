@@ -1,12 +1,16 @@
 import Navbar from "@/components/navigation/Navbar";
+import HeroMedia from "@/components/hero/HeroMedia";
+import HeroContent from "@/components/hero/HeroContent";
 
 function App() {
   return (
     <div className="bg-warmwhite dark:bg-charcoal min-h-screen">
       <Navbar />
-      <div className="h-[80vh] bg-stone flex items-center justify-center">
-        <p className="text-white font-body">Hero image will go here</p>
-      </div>
+      <section className="relative h-[90vh]">
+        <HeroMedia />
+        <div className="absolute inset-0 bg-black/40" />
+        <HeroContent />
+      </section>
     </div>
   );
 }
