@@ -1,22 +1,26 @@
+import { Routes, Route } from "react-router-dom";
 import Navbar from "@/components/navigation/Navbar";
-import HeroMedia from "@/components/hero/HeroMedia";
-import HeroContent from "@/components/hero/HeroContent";
-import HeroStats from "@/components/hero/HeroStats";
-import AboutPreview from "@/components/common/AboutPreview";
+import Home from "@/pages/Home";
+import About from "@/pages/About";
+import Services from "@/pages/Services";
+import Projects from "@/pages/Projects";
+import Blog from "@/pages/Blog";
+import Contact from "@/pages/Contact";
+import NotFound from "@/pages/NotFound";
 
 function App() {
   return (
     <div className="bg-warmwhite dark:bg-charcoal min-h-screen">
       <Navbar />
-      <section className="relative h-[90vh] flex flex-col justify-between">
-        <HeroMedia />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="flex-1 flex items-center justify-center">
-          <HeroContent />
-        </div>
-        <HeroStats />
-      </section>
-      <AboutPreview/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }

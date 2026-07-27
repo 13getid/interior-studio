@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X, Moon, Sun } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
 import { useScrolled } from "@/hooks/useScrolled";
@@ -28,16 +29,16 @@ export default function Navbar() {
       }`}
     >
       <nav className="flex items-center justify-between px-6 md:px-12 py-6">
-        <a href="/" className={`font-display text-2xl tracking-wide ${textColor}`}>
-          INTERIOR DESIGNS
-        </a>
+        <Link to="/" className={`font-display text-2xl tracking-wide ${textColor}`}>
+          INTERIOR
+        </Link>
 
         <ul className={`hidden md:flex items-center gap-8 font-body text-sm uppercase tracking-wider ${textColor}`}>
           {NAV_LINKS.map((link) => (
             <li key={link.label}>
-              <a href={link.href} className="hover:text-gold transition-colors">
+              <Link to={link.href} className="hover:text-gold transition-colors">
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -51,8 +52,8 @@ export default function Navbar() {
             {isDark ? <Sun size={20} /> : <Moon size={20} />}
           </button>
 
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className={`hidden md:inline-block border text-sm uppercase tracking-wider px-5 py-2 transition-colors ${
               isScrolled
                 ? "border-charcoal dark:border-warmwhite text-charcoal dark:text-warmwhite hover:bg-charcoal hover:text-warmwhite dark:hover:bg-warmwhite dark:hover:text-charcoal"
@@ -60,7 +61,7 @@ export default function Navbar() {
             }`}
           >
             Book a Consultation
-          </a>
+          </Link>
 
           <button
             className={`md:hidden ${textColor}`}
