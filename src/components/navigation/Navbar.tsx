@@ -30,7 +30,7 @@ export default function Navbar() {
     >
       <nav className="flex items-center justify-between px-6 md:px-12 py-6">
         <Link to="/" className={`font-display text-2xl tracking-wide ${textColor}`}>
-          INTERIOR
+          INTERIOR-STUDIO
         </Link>
 
         <ul className={`hidden md:flex items-center gap-8 font-body text-sm uppercase tracking-wider ${textColor}`}>

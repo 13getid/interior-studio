@@ -2,6 +2,7 @@ import HeroMedia from "@/components/hero/HeroMedia";
 import HeroContent from "@/components/hero/HeroContent";
 import HeroStats from "@/components/hero/HeroStats";
 import AboutPreview from "@/components/common/AboutPreview";
+import ServicesPreview from "@/components/services/ServicesPreview";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <HeroStats />
       </section>
       <AboutPreview />
+      <ServicesPreview/>
     </>
   );
 }
