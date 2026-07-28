@@ -1,4 +1,3 @@
-import type { LucideIcon } from "lucide-react";
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaTiktok } from "react-icons/fa";
 import type { IconType } from "react-icons";
 
