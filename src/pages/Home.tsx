@@ -3,6 +3,7 @@ import HeroContent from "@/components/hero/HeroContent";
 import HeroStats from "@/components/hero/HeroStats";
 import AboutPreview from "@/components/common/AboutPreview";
 import ServicesPreview from "@/components/services/ServicesPreview";
+import FeaturedProjects from "@/components/portfolio/FeaturedProjects";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       </section>
       <AboutPreview />
       <ServicesPreview/>
+      <FeaturedProjects/>
     </>
   );
 }
