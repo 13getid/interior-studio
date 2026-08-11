@@ -5,6 +5,7 @@ import AboutPreview from "@/components/common/AboutPreview";
 import ServicesPreview from "@/components/services/ServicesPreview";
 import FeaturedProjects from "@/components/portfolio/FeaturedProjects";
 import TestimonialsSlider from "@/components/testimonials/TestimonialsSlider";
+import DesignProcess from "@/components/common/DesignProcess";
 
 export default function Home() {
   return (
@@ -18,9 +19,11 @@ export default function Home() {
         <HeroStats />
       </section>
       <AboutPreview />
-      <ServicesPreview/>
+      <DesignProcess />
       <FeaturedProjects/>
+      <ServicesPreview/>
       <TestimonialsSlider />
+      
     </>
   );
 }
