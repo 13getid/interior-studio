@@ -43,3 +43,43 @@ export const FEATURED_SERVICES: Service[] = [
     imagePublicId: "interior-studio/services/renovation",
   },
 ];
+
+import {
+  Home as HomeIcon,
+  Building2,
+  ChefHat,
+  Bed,
+  Briefcase,
+  UtensilsCrossed,
+  Hotel,
+  Sofa,
+  Lightbulb,
+  Hammer,
+  Trees,
+  Box,
+  LayoutGrid,
+  type LucideIcon,
+} from "lucide-react";
+
+export interface ServiceListing {
+  id: string;
+  title: string;
+  description: string;
+  icon: LucideIcon;
+}
+
+export const ALL_SERVICES: ServiceListing[] = [
+  { id: "residential", title: "Residential Design", description: "Full-home interiors tailored to how you live.", icon: HomeIcon },
+  { id: "commercial", title: "Commercial Design", description: "Spaces that reflect your brand and serve your team.", icon: Building2 },
+  { id: "kitchen", title: "Kitchen Design", description: "Functional, beautiful kitchens built around your routine.", icon: ChefHat },
+  { id: "bedroom", title: "Bedroom Design", description: "Calm, restorative spaces designed for real rest.", icon: Bed },
+  { id: "office", title: "Office Design", description: "Workspaces that support focus and collaboration.", icon: Briefcase },
+  { id: "restaurant", title: "Restaurant Design", description: "Dining spaces that shape the whole guest experience.", icon: UtensilsCrossed },
+  { id: "hotels", title: "Hotels", description: "Hospitality interiors built for comfort at scale.", icon: Hotel },
+  { id: "furniture", title: "Furniture Selection", description: "Curated pieces that fit your space and your life.", icon: Sofa },
+  { id: "lighting", title: "Lighting Design", description: "Layered lighting that shapes mood and atmosphere.", icon: Lightbulb },
+  { id: "renovation", title: "Renovation", description: "Full transformations, from concept to final styling.", icon: Hammer },
+  { id: "landscape", title: "Landscape", description: "Outdoor spaces designed as an extension of the home.", icon: Trees },
+  { id: "3d-visualization", title: "3D Visualization", description: "See your space in detail before a single item is ordered.", icon: Box },
+  { id: "space-planning", title: "Space Planning", description: "Thoughtful layouts that make every square foot count.", icon: LayoutGrid },
+];
