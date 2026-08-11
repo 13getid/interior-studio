@@ -6,6 +6,7 @@ import ServicesPreview from "@/components/services/ServicesPreview";
 import FeaturedProjects from "@/components/portfolio/FeaturedProjects";
 import TestimonialsSlider from "@/components/testimonials/TestimonialsSlider";
 import DesignProcess from "@/components/common/DesignProcess";
+import InstagramGrid from "@/components/gallery/InstagramGrid";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <FeaturedProjects/>
       <ServicesPreview/>
       <TestimonialsSlider />
+      <InstagramGrid />
       
     </>
   );
