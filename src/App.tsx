@@ -9,6 +9,7 @@ import Contact from "@/pages/Contact";
 import NotFound from "@/pages/NotFound";
 import Footer from "@/components/footer/Footer";
 import ProjectDetail from "@/pages/ProjectDetail";
+import BlogDetail from "@/pages/BlogDetail";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/blog/:slug" element={<BlogDetail />} />
       </Routes>
       <Footer />
     </div>
