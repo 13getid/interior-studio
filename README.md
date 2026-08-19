@@ -26,30 +26,32 @@ Visit `http://localhost:5173`.
 
 Create a `.env` file in the project root (never committed — see `.gitignore`):
 
+```
 VITE_CLOUDINARY_CLOUD_NAME=your_cloud_name_here
-
+```
 
 ## Project Structure
 
+```
 src/
-components/
-common/ → AboutPreview, DesignProcess, ProcessStepItem, CTABanner
-contact/ → ContactForm
-footer/ → Footer
-gallery/ → InstagramGrid
-hero/ → HeroMedia, HeroContent, HeroStats, StatCounter
-navigation/ → Navbar
-portfolio/ → ProjectCard, FeaturedProjects
-services/ → ServiceCard, ServicesPreview, ServiceListCard
-testimonials/ → TestimonialsSlider, StarRating
-blog/ → BlogCard
-pages/ → Home, About, Services, Projects, ProjectDetail,
-Blog, BlogDetail, Contact, Consultation, NotFound
-data/ → services.ts, projects.ts, blog.ts, testimonials.ts,
-footer.ts, instagram.ts, process.ts
-hooks/ → useTheme, useScrolled, useInView, useCountUp
-lib/ → cloudinary.ts (URL builder helper)
-
+  components/
+    common/         → AboutPreview, DesignProcess, ProcessStepItem, CTABanner
+    contact/        → ContactForm
+    footer/         → Footer
+    gallery/        → InstagramGrid
+    hero/           → HeroMedia, HeroContent, HeroStats, StatCounter
+    navigation/     → Navbar
+    portfolio/      → ProjectCard, FeaturedProjects
+    services/       → ServiceCard, ServicesPreview, ServiceListCard
+    testimonials/   → TestimonialsSlider, StarRating
+    blog/           → BlogCard
+  pages/            → Home, About, Services, Projects, ProjectDetail,
+                       Blog, BlogDetail, Contact, Consultation, NotFound
+  data/             → services.ts, projects.ts, blog.ts, testimonials.ts,
+                       footer.ts, instagram.ts, process.ts
+  hooks/            → useTheme, useScrolled, useInView, useCountUp
+  lib/              → cloudinary.ts (URL builder helper)
+```
 
 ## Design System
 
@@ -73,18 +75,18 @@ Dark mode: toggled via the `useTheme` hook, which adds/removes a `dark` class on
 Photos and video are never hardcoded as files in the repo — they're pulled live from Cloudinary by Public ID, using `src/lib/cloudinary.ts`. The client can log into Cloudinary and upload/replace images (matching the existing Public ID) with **no code changes or redeploys needed**.
 
 Current folder convention:
-
+```
 interior-studio/
-hero/ → hero-image, hero-video (optional — falls back to image if absent)
-about/ → about-preview
-services/ → residential-design, commercial-design, kitchen-design, ...
-projects/
-<slug>/cover
-blog/
-<slug>/cover
-testimonials/ → client-1, client-2, client-3
-instagram/ → photo-1 through photo-6
-
+  hero/            → hero-image, hero-video (optional — falls back to image if absent)
+  about/           → about-preview
+  services/        → residential-design, commercial-design, kitchen-design, ...
+  projects/
+    <slug>/cover
+  blog/
+    <slug>/cover
+  testimonials/    → client-1, client-2, client-3
+  instagram/       → photo-1 through photo-6
+```
 
 **Important:** always use Cloudinary's **Upload** button and manually set the Public ID at upload time — renaming after upload has been unreliable in this project's testing.
 
