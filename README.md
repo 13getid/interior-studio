@@ -1,32 +1,36 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**Important:** always use Cloudinary's **Upload** button and manually set the Public ID at upload time — renaming after upload has been unreliable in this project's testing.
 
-Currently, two official plugins are available:
+## Routing
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+| Path | Page |
+|---|---|
+| `/` | Home |
+| `/about` | About (story, process, Instagram grid) |
+| `/services` | All 13 services |
+| `/projects` | Filterable/searchable project list |
+| `/projects/:slug` | Individual project detail |
+| `/blog` | Blog listing |
+| `/blog/:slug` | Individual blog post |
+| `/contact` | Contact form |
+| `/consultation` | Full consultation booking form |
+| `*` | 404 Not Found |
 
-## React Compiler
+## Known Placeholders / Not Yet Wired Up
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Contact & Consultation forms**: currently log to console and show a success state, no email is actually sent. To go live, sign up for Formspree (or similar), and uncomment/complete the `fetch` call in `ContactForm.tsx` and `Consultation.tsx` (see `TODO` comments).
+- **Social links** (`src/data/footer.ts`, `src/data/instagram.ts`): placeholder URLs. Update `SOCIAL_LINKS`, `INSTAGRAM_URL`, and `INSTAGRAM_HANDLE` with the client's real accounts.
+- **Consultation image upload**: UI only — selected file is not actually uploaded anywhere yet.
+- **Contact page map**: placeholder box, not a real embedded map yet.
+- **Mobile navigation menu**: hamburger icon toggles but has no dropdown menu built yet.
 
-## Expanding the Oxlint configuration
+## Not Yet Built
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- Gallery page (masonry grid + lightbox)
+- FAQ page (accordion)
+- SEO meta tags per route
+- Real email delivery (Formspree wiring)
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+## Deployment
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Not yet deployed. When ready, this is a standard Vite app — compatible with Vercel, Netlify, or similar static hosts. Remember to set `VITE_CLOUDINARY_CLOUD_NAME` as an environment variable on whichever host is used.
