@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Moon, Sun } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
 import { useScrolled } from "@/hooks/useScrolled";
@@ -17,20 +17,24 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isDark, toggleTheme } = useTheme();
   const isScrolled = useScrolled();
+  const location = useLocation();
 
-  const textColor = isScrolled
-    ? "text-charcoal dark:text-warmwhite"
-    : "text-warmwhite";
+  const hasHeroBackdrop = location.pathname === "/";
+  const showTransparent = hasHeroBackdrop && !isScrolled;
+
+  const textColor = showTransparent
+    ? "text-warmwhite"
+    : "text-charcoal dark:text-warmwhite";
 
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
-        isScrolled ? "bg-warmwhite dark:bg-charcoal shadow-md" : "bg-transparent"
+        showTransparent ? "bg-transparent" : "bg-warmwhite dark:bg-charcoal shadow-md"
       }`}
     >
       <nav className="flex items-center justify-between px-6 md:px-12 py-6">
         <Link to="/" className={`font-display text-2xl tracking-wide ${textColor}`}>
-          INTERIOR-STUDIO
+          INTERIOR
         </Link>
 
         <ul className={`hidden md:flex items-center gap-8 font-body text-sm uppercase tracking-wider ${textColor}`}>
@@ -53,11 +57,11 @@ export default function Navbar() {
           </button>
 
           <Link
-            to="/contact"
+            to="/consultation"
             className={`hidden md:inline-block border text-sm uppercase tracking-wider px-5 py-2 transition-colors ${
-              isScrolled
-                ? "border-charcoal dark:border-warmwhite text-charcoal dark:text-warmwhite hover:bg-charcoal hover:text-warmwhite dark:hover:bg-warmwhite dark:hover:text-charcoal"
-                : "border-warmwhite text-warmwhite hover:bg-warmwhite hover:text-charcoal"
+              showTransparent
+                ? "border-warmwhite text-warmwhite hover:bg-warmwhite hover:text-charcoal"
+                : "border-charcoal dark:border-warmwhite text-charcoal dark:text-warmwhite hover:bg-charcoal hover:text-warmwhite dark:hover:bg-warmwhite dark:hover:text-charcoal"
             }`}
           >
             Book a Consultation

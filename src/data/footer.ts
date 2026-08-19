@@ -26,6 +26,6 @@ export const QUICK_LINKS = [
 export const CONTACT_INFO = {
   phone: "+254 700 000 000",
   email: "hello@interiorstudio.com",
-  address: "Nairobi, Kenya",
+  address: "Mombasa, Kenya",
   officeHours: "Mon – Fri: 9:00 AM – 6:00 PM",
 };

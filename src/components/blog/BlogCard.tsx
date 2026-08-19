@@ -40,10 +40,10 @@ export default function BlogCard({ post, index }: BlogCardProps) {
         <h3 className="font-display text-xl text-charcoal dark:text-warmwhite leading-snug group-hover:text-gold transition-colors">
           {post.title}
         </h3>
-        <p className="font-body text-sm text-stone mt-3 leading-relaxed">
+        <p className="font-body text-sm text-stone-dark dark:text-stone mt-3 leading-relaxed">
           {post.excerpt}
         </p>
-        <p className="font-body text-xs text-stone mt-4">
+        <p className="font-body text-xs text-stone-dark dark:text-stone mt-4">
           {formatDate(post.date)}
         </p>
       </Link>

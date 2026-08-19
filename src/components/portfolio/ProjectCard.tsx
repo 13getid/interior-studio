@@ -35,7 +35,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             <h3 className="font-display text-2xl text-charcoal dark:text-warmwhite">
               {project.title}
             </h3>
-            <p className="font-body text-sm text-stone mt-1">
+            <p className="font-body text-sm text-stone-dark dark:text-stone mt-1">
               {project.location} · {project.year}
             </p>
           </div>

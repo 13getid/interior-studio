@@ -10,7 +10,6 @@ interface ProcessStepItemProps {
 export default function ProcessStepItem({ step, index, isLast }: ProcessStepItemProps) {
   return (
     <div className="relative flex gap-6 md:gap-10">
-      {/* Number circle + connecting line */}
       <div className="flex flex-col items-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -34,7 +33,6 @@ export default function ProcessStepItem({ step, index, isLast }: ProcessStepItem
         )}
       </div>
 
-      {/* Text */}
       <motion.div
         initial={{ opacity: 0, x: 20 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -45,7 +43,7 @@ export default function ProcessStepItem({ step, index, isLast }: ProcessStepItem
         <h3 className="font-display text-2xl text-charcoal dark:text-warmwhite mb-2">
           {step.title}
         </h3>
-        <p className="font-body text-stone leading-relaxed max-w-md">
+        <p className="font-body text-stone-dark dark:text-stone leading-relaxed max-w-md">
           {step.description}
         </p>
       </motion.div>

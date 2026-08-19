@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export default function HeroContent() {
@@ -25,7 +26,7 @@ export default function HeroContent() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="font-body text-stone md:text-lg mt-6 max-w-xl"
+        className="font-body text-stone-dark dark:text-stone md:text-lg mt-6 max-w-xl"
       >
         Luxury interiors crafted with creativity, precision, and timeless elegance.
       </motion.p>
@@ -36,19 +37,18 @@ export default function HeroContent() {
         transition={{ duration: 0.8, delay: 0.6 }}
         className="flex flex-col sm:flex-row gap-4 mt-10"
       >
-        <a
-          href="#projects"
+        <Link
+          to="/projects"
           className="bg-gold text-charcoal font-body text-sm uppercase tracking-wider px-8 py-4 hover:bg-warmwhite transition-colors"
         >
           Explore Projects
-        </a>
-        
-        <a
-          href="#contact"
+        </Link>
+        <Link
+          to="/consultation"
           className="border border-warmwhite text-warmwhite font-body text-sm uppercase tracking-wider px-8 py-4 hover:bg-warmwhite hover:text-charcoal transition-colors"
         >
           Book Consultation
-        </a>
+        </Link>
       </motion.div>
     </div>
   );

@@ -21,7 +21,7 @@ export default function ServiceListCard({ service, index }: ServiceListCardProps
       <h3 className="font-display text-xl text-charcoal dark:text-warmwhite mb-2">
         {service.title}
       </h3>
-      <p className="font-body text-sm text-stone leading-relaxed">
+      <p className="font-body text-sm text-stone-dark dark:text-stone leading-relaxed">
         {service.description}
       </p>
     </motion.div>
